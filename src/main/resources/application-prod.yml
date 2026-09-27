@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: Make My e Notesss
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${GOOGLE_CLIENT_ID}
+            client-secret: ${GOOGLE_CLIENT_SECRET}
+            scope:
+              - email
+              - profile
+            redirect-uri: "https://learning-tracker-backend-ly4g.onrender.com/oauth2/callback/google"
+
+  datasource:
+    url: ${db_url}
+    username: ${db_username}
+    password: ${db_password}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        format_sql: true
+
+  servlet:
+    multipart:
+      max-file-size: 2GB
+      max-request-size: 2GB
+
+server:
+  port: ${PORT:5050}   # ✅ IMPORTANT for Render
+
+app:
+  frontend-url: ${FRONTEND_URL}
+
+secreteJwtString: ${JWT_SECRET}

@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: Make My E Notes
+  profiles:
+    active: dev
+    servlet:
+      multipart:
+        max-file-size: 50MB
+  springdoc:
+    default-produces-media-type: application/json
