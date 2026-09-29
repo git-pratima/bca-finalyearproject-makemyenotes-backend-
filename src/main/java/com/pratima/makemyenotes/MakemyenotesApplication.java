@@ -14,6 +14,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @SpringBootApplication
 public class MakemyenotesApplication {
 
+    
     @Bean
     public OpenAPI inventoryOpenAPI() {
 
