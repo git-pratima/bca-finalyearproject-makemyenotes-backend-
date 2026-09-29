@@ -19,7 +19,7 @@ public class MakemyenotesApplication {
 
         return new OpenAPI()
                 .info(new Info()
-                        .title("Make My e Notes API")
+                        .title("Pratima BCA Final Year: Make My e Notes API")
                         .description("API documentation for Make My e Notes")
                         .version("1.0"))
                 .addSecurityItem(new SecurityRequirement().addList("Bearer Authentication"))
